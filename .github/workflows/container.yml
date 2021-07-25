@@ -30,6 +30,7 @@ jobs:
 
       - name: Build
         run: npm run build
+        env: PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
 
       - name: Configure AWS credentials from Test account
         uses: aws-actions/configure-aws-credentials@v1
